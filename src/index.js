@@ -4,11 +4,14 @@ import ReactDOM from 'react-dom'
 import App from './App';
 import './index.css'
 
+import { ContextProvider } from './contexts/ContextProvider'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+
+ReactDOM.render(
+  <ContextProvider>
     <App />
-  </React.StrictMode>
+  </ContextProvider>,
+  document.getElementById('root')
 );
 

@@ -5,6 +5,7 @@ import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import {Navbar, Footer, Sidebar} from './components'
 import { Clients, Dashboard, Query } from './pages'
+import { useStateContext } from './contexts/ContextProvider';
 
 import './App.css'
 
@@ -12,7 +13,7 @@ import './App.css'
 
 const App = () => {
 
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
 
   return (
     <div>
@@ -59,6 +60,7 @@ const App = () => {
               <Route path="/dashboard" element={<Dashboard />} />
               
               <Route path="/clients" element={<Clients />} />
+              <Route path="/query" element={<Query />} />
 
             </Routes>
           </div>
